@@ -1,0 +1,188 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lekar</title>
+    <style>
+        body {
+            background-color: seagreen;
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        table {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            border-collapse: collapse;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .termin {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+            .termin input[type="datetime-local"] {
+                width: calc(100% - 100px);
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 40px;
+                font-size: 16px;
+                margin-right: 10px;
+                box-sizing: border-box;
+                outline: none;
+            }
+            .termin button {
+                padding: 12px 24px;
+                background-color: seagreen;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+        h2 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+        }
+
+            ul li {
+                margin-bottom: 5px;
+            }
+
+        form {
+            display: flex;
+            align-items: center;
+        }
+            form input[type="text"] {
+                width: 200px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+                margin-right: 10px;
+                box-sizing: border-box;
+                outline: none;
+            }
+
+            form button {
+                padding: 10px 20px;
+                background-color: seagreen;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <div class="termini">
+        <h2>Termini</h2>
+        <table>
+            <tr>
+                <th>Ime lekara</th>
+                <th>Prezime lekara</th>
+                <th>Datum</th>
+                <th>Status</th>
+                <th width="20px">Opis</th>
+            </tr>
+            @foreach (var item in ViewBag.termini)
+            {
+
+                <tr>
+                    <td>@item.Lekar.Ime</td>
+                    <td>@item.Lekar.Prezime</td>
+                    <td>@item.DatumTermina</td>
+                    <td>@item.Status</td>
+                    <td>@item.Opis</td>
+                </tr>
+
+            }
+        </table>
+    </div>
+    <div class="termin">
+        <h4>Kreiraj termin</h4>
+        <form method="post" action="/Lekar/KreirajTermin">
+            <input type="datetime-local" name="date"/>
+            <input type="text" name="opis" />
+            <button type="submit">Kreiraj</button>
+        </form>
+    </div>
+    <h2>Pacijenti koji su posetili ovog lekara</h2>
+
+<div>
+    <table>
+        <tr>
+            <th>Korisnicko Ime</th>
+            <th>Datum Rodjenja</th>
+            <th>Email</th>
+            <th>Prepisane Terapije</th>
+            <th>Prepisi Terapiju</th>
+        </tr>
+        @foreach (var pacijent in ViewBag.terapije)
+        {
+            <tr>
+                <td>@pacijent.KorisnickoIme</td>
+                <td>@pacijent.DatumRodjenja.ToShortDateString()</td>
+                <td>@pacijent.Email</td>
+                <td>
+                    <ul>
+                        @foreach (var terapija in pacijent.PrepisaneTerapije)
+                        {
+                            <li>@terapija</li>
+                        }
+                    </ul>
+                </td>
+                <td>
+                    <form method="post" action="/Lekar/PrepisatiTerapiju">
+                        <input type="hidden" name="korisnickoIme" value="@pacijent.KorisnickoIme" />
+                        <input type="text" name="terapija" placeholder="Unesite terapiju" />
+                        <button type="submit" class="btn">Prepiši</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<div>
+
+</div>
+</body>
+</html>

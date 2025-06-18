@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Admin</title>
+    <style>
+        
+        body {
+            background-color: seagreen; 
+            font-family: Arial, sans-serif; 
+        }
+
+        
+        table {
+            width: 100%;
+            margin-bottom: 20px; 
+            border-collapse: collapse; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            background-color: white; 
+        }
+
+        th, td {
+            padding: 10px; 
+            text-align: left; 
+            border-bottom: 1px solid #ddd; 
+        }
+
+        th {
+            background-color: #f2f2f2; 
+        }
+
+       
+        form {
+            margin-bottom: 20px;
+            color:white
+        }
+
+       
+        .container {
+            background-color: seagreen; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+        }
+
+            .container h3 {
+                color: white; 
+            }
+
+        .bottom-form {
+            text-align: center;
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+    @{ var errorMessage = TempData["ErrorMessage"] as string; }
+    
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="6">Pregled pacijenata</th>
+            </tr>
+            <tr>
+                <th>Korisnicko ime</th>
+                <th>JMBG</th>
+                <th>Sifra</th>
+                <th>Datum rodjenja</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.pacijenti)
+            {
+                <tr>
+                    <td>@item.KorisnickoIme</td>
+                    <td>@item.Jmbg</td>
+                    <td>@item.Sifra</td>
+                    <td>@item.DatumRodjenja</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <form method="post" action="/Admin/Obrisati">
+                            <input type="hidden" name="korisnickoIme" value="@item.KorisnickoIme" />
+                            <button type="submit">Obrisati</button>
+                        </form>
+
+                    </td>
+
+                </tr>
+            }
+        </table>
+    </div>
+    <div class="container">
+        <table>
+            <tr>
+                <th colspan="6">Azuriranje</th>
+            </tr>
+            <tr>
+                <th>Korisnicko ime</th>
+                <th>JMBG</th>
+                <th>Sifra</th>
+                <th>Datum rodjenja</th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+            @foreach (var item in ViewBag.pacijenti)
+            {
+                <form method="post" action="/Admin/Azurirati">
+                <tr>
+                    <td>@item.KorisnickoIme</td>
+                    <td>@item.Jmbg</td>
+                    <td><input type="text" name="sifra" value=@item.Sifra /></td>
+                    <td><input type="datetime-local" name="date" required></td>
+                    <td><input type="text" name="email" value=@item.Email /></td>
+                    <td>
+
+                        <input type="hidden" name="korisnickoIme" value="@item.KorisnickoIme" />
+                        <button type="submit">Azurirati</button>
+
+                    </td>
+                </tr>
+                </form>
+            }
+        </table>
+    </div>
+    <div class="container bottom-form">
+        <h3>Kreiranje korisnika</h3>
+        <form method="post" action="/Admin/Kreirati">
+            Korisnicko ime :    <input type="text" name="korisnickoIme" required /><br />
+            JMBG:               <input type="text" name="jmbg" required /><br />
+            Sifra:              <input type="password" name="sifra" required /><br />
+            Email:              <input type="email" name="email" required /><br />
+            Datum rodjenja:     <input type="datetime-local" name="date" required /><br />
+            <button type="submit">Kreiraj korisnika</button>
+        </form>
+
+        @if (!string.IsNullOrEmpty(errorMessage))
+        {
+            <div style="color: red;">@errorMessage</div>
+        }
+
+    </div>
+</body>
+</html>

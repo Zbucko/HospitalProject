@@ -1,0 +1,296 @@
+[
+  {
+    "KorisnickoIme": "lekar1",
+    "Sifra": "lekar1",
+    "Ime": "Lekar",
+    "Prezime": "Lekarovic",
+    "DatumRodjenja": "1999-09-09T00:00:00",
+    "Email": "doktor@lekar.com",
+    "Termini": [
+      {
+        "ID": 4,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": []
+        },
+        "Status": 1,
+        "DatumTermina": "1999-06-02T16:00:00",
+        "Opis": "Pregled"
+      },
+      {
+        "ID": 5,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": []
+        },
+        "Status": 1,
+        "DatumTermina": "1999-06-02T17:00:00",
+        "Opis": ""
+      },
+      {
+        "ID": 6,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": []
+        },
+        "Status": 1,
+        "DatumTermina": "1999-06-02T17:00:00",
+        "Opis": "Pregled"
+      },
+      {
+        "ID": 7,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": [
+            {
+              "ID": 4,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 0,
+              "DatumTermina": "1999-06-02T16:00:00",
+              "Opis": "Sistematski"
+            },
+            {
+              "ID": 5,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 1,
+              "DatumTermina": "1999-06-02T17:00:00",
+              "Opis": "Sistematski"
+            },
+            {
+              "ID": 6,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 1,
+              "DatumTermina": "1999-06-02T17:00:00",
+              "Opis": "Pregled"
+            }
+          ]
+        },
+        "Status": 1,
+        "DatumTermina": "2024-07-13T06:32:00",
+        "Opis": "Sistematski"
+      },
+      {
+        "ID": 56,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": [
+            {
+              "ID": 4,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 0,
+              "DatumTermina": "1999-06-02T16:00:00",
+              "Opis": "Pregled"
+            },
+            {
+              "ID": 5,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 1,
+              "DatumTermina": "1999-06-02T17:00:00",
+              "Opis": ""
+            },
+            {
+              "ID": 6,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": []
+              },
+              "Status": 1,
+              "DatumTermina": "1999-06-02T17:00:00",
+              "Opis": "Pregled"
+            },
+            {
+              "ID": 7,
+              "Lekar": {
+                "KorisnickoIme": "lekar1",
+                "Sifra": "lekar1",
+                "Ime": "Lekar",
+                "Prezime": "Lekarovic",
+                "DatumRodjenja": "1999-09-09T00:00:00",
+                "Email": "doktor@lekar.com",
+                "Termini": [
+                  {
+                    "ID": 4,
+                    "Lekar": {
+                      "KorisnickoIme": "lekar1",
+                      "Sifra": "lekar1",
+                      "Ime": "Lekar",
+                      "Prezime": "Lekarovic",
+                      "DatumRodjenja": "1999-09-09T00:00:00",
+                      "Email": "doktor@lekar.com",
+                      "Termini": []
+                    },
+                    "Status": 0,
+                    "DatumTermina": "1999-06-02T16:00:00",
+                    "Opis": "Sistematski"
+                  },
+                  {
+                    "ID": 5,
+                    "Lekar": {
+                      "KorisnickoIme": "lekar1",
+                      "Sifra": "lekar1",
+                      "Ime": "Lekar",
+                      "Prezime": "Lekarovic",
+                      "DatumRodjenja": "1999-09-09T00:00:00",
+                      "Email": "doktor@lekar.com",
+                      "Termini": []
+                    },
+                    "Status": 1,
+                    "DatumTermina": "1999-06-02T17:00:00",
+                    "Opis": "Sistematski"
+                  },
+                  {
+                    "ID": 6,
+                    "Lekar": {
+                      "KorisnickoIme": "lekar1",
+                      "Sifra": "lekar1",
+                      "Ime": "Lekar",
+                      "Prezime": "Lekarovic",
+                      "DatumRodjenja": "1999-09-09T00:00:00",
+                      "Email": "doktor@lekar.com",
+                      "Termini": []
+                    },
+                    "Status": 1,
+                    "DatumTermina": "1999-06-02T17:00:00",
+                    "Opis": "Pregled"
+                  }
+                ]
+              },
+              "Status": 1,
+              "DatumTermina": "2024-07-13T06:32:00",
+              "Opis": "Sistematski"
+            }
+          ]
+        },
+        "Status": 0,
+        "DatumTermina": "2024-07-19T08:48:00",
+        "Opis": "Pregled"
+      }
+    ]
+  },
+  {
+    "KorisnickoIme": "lekar2",
+    "Sifra": "lekar2",
+    "Ime": "Lekar2",
+    "Prezime": "Lekarovic2",
+    "DatumRodjenja": "1999-09-09T12:00:00",
+    "Email": "doktor2@lekar.com",
+    "Termini": [
+      {
+        "ID": 7,
+        "Lekar": {
+          "KorisnickoIme": "lekar2",
+          "Sifra": "lekar2",
+          "Ime": "Lekar2",
+          "Prezime": "Lekarovic2",
+          "DatumRodjenja": "1999-09-09T12:00:00",
+          "Email": "doktor2@lekar.com",
+          "Termini": []
+        },
+        "Status": 1,
+        "DatumTermina": "2002-09-02T09:05:00",
+        "Opis": "Pregled"
+      },
+      {
+        "ID": 11,
+        "Lekar": {
+          "KorisnickoIme": "lekar2",
+          "Sifra": "lekar2",
+          "Ime": "Lekar2",
+          "Prezime": "Lekarovic2",
+          "DatumRodjenja": "1999-09-09T12:00:00",
+          "Email": "doktor2@lekar.com",
+          "Termini": [
+            {
+              "ID": 7,
+              "Lekar": {
+                "KorisnickoIme": "lekar2",
+                "Sifra": "lekar2",
+                "Ime": "Lekar2",
+                "Prezime": "Lekarovic2",
+                "DatumRodjenja": "1999-09-09T12:00:00",
+                "Email": "doktor2@lekar.com",
+                "Termini": []
+              },
+              "Status": 0,
+              "DatumTermina": "2002-09-02T09:05:00",
+              "Opis": "Pregled"
+            }
+          ]
+        },
+        "Status": 1,
+        "DatumTermina": "2024-07-24T06:32:00",
+        "Opis": "Sistematski"
+      }
+    ]
+  }
+]

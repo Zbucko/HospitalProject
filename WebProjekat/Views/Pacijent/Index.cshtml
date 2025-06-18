@@ -1,0 +1,112 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pacijent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: seagreen;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .table-container {
+            width: 80%;
+            max-width: 800px;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            background-color: #fff;
+            border-collapse: collapse;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            background-color: seagreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Pacijent:</h2>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Ime lekara</th>
+                <th>Prezime lekara</th>
+                <th>Datum</th>
+                <th>Status</th>
+                <th width="20px">Opis</th>
+                <th>Zakazati</th>
+            </tr>
+            @foreach (var item in ViewBag.slobodniTermini)
+            {
+
+                <tr>
+                    <td>@item.Lekar.Ime</td>
+                    <td>@item.Lekar.Prezime</td>
+                    <td>@item.DatumTermina</td>
+                    <td>@item.Status</td>
+                    <td>@item.Opis</td>
+                    <td>
+                        <form method="post" action="/Pacijent/Zakazati">
+                            <input type="hidden" name="ID" value="@item.ID" />
+                            <button type="submit" class="btn">Zakazati</button>
+                        </form>
+                    </td>
+
+                </tr>
+
+            }
+        </table>
+    </div>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Prepisane terapije</th>
+            </tr>
+            @foreach (var item in ViewBag.terapije)
+            {
+                <tr>
+                    <td>@item</td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

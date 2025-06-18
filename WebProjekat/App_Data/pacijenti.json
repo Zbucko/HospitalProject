@@ -1,0 +1,36 @@
+[
+  {
+    "KorisnickoIme": "Luka",
+    "Jmbg": "0209002800078",
+    "Sifra": "luka123",
+    "DatumRodjenja": "2024-07-04T08:50:00",
+    "Email": "lua@lua.com",
+    "Termini": [],
+    "PrepisaneTerapije": []
+  },
+  {
+    "KorisnickoIme": "Test",
+    "Jmbg": "0209002800076",
+    "Sifra": "123",
+    "DatumRodjenja": "2024-07-24T08:49:00",
+    "Email": "emaill@email.com",
+    "Termini": [
+      {
+        "ID": 4,
+        "Lekar": {
+          "KorisnickoIme": "lekar1",
+          "Sifra": "lekar1",
+          "Ime": "Lekar",
+          "Prezime": "Lekarovic",
+          "DatumRodjenja": "1999-09-09T00:00:00",
+          "Email": "doktor@lekar.com",
+          "Termini": []
+        },
+        "Status": 1,
+        "DatumTermina": "1999-06-02T16:00:00",
+        "Opis": "Pregled"
+      }
+    ],
+    "PrepisaneTerapije": []
+  }
+]
